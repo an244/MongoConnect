@@ -5,6 +5,8 @@
   "repository": "https://github.com/an244/MongoConnect.git",
   "license": "MIT",
   "dependencies": {
+    "ejs": "^2.5.7",
+    "express": "^4.15.4",
     "mongodb": "^2.2.31"
   }
 }
