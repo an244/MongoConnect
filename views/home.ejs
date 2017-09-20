@@ -8,5 +8,9 @@
     </head>
     <body>
       <h3>Words</h3>
+       <% arrWords.forEach(e => { %>
+           <h4><%= e.en %></h4>
+           <p>><%= e.vn %></p>
+           <%});%>
     </body>
 </html>
