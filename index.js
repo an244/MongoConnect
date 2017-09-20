@@ -1,5 +1,6 @@
-const MongoClient = require ('mongodb').MongoClient
-//viet gon lai: const {MongoClient} = require ('mongod')
+//const MongoClient = require ('mongodb').MongoClient
+//viet gon lai: 
+const {MongoClient, ObjectId} = require ('mongodb')
 
 const express = require('express');
 const app = express();
@@ -21,6 +22,13 @@ app.post('/add', parser, (req,res)=> {
      WordsCollection.insert({en, vn})
      .then(()=> res.redirect('/'))
      .catch(er => res.send(er.message));
+});
+
+app.get('/xoa/:id',(req,res)=> {
+    const {id} = req.params;
+    WordsCollection.remove({_id: ObjectId(id)})
+    .then(()=> res.redirect('/'))
+    .catch(er => res.send(er.message));
 });
 
 const url = 'mongodb://localhost:27017/shop';
