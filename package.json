@@ -1,0 +1,10 @@
+{
+  "name": "MongoConnect",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/an244/MongoConnect.git",
+  "license": "MIT",
+  "dependencies": {
+    "mongodb": "^2.2.31"
+  }
+}
